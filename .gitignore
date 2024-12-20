@@ -1,3 +1,5 @@
 bin/
 MOVES
 .vscode/
+.vs/
+.idea/

@@ -1,4 +1,8 @@
-﻿class Program {
+﻿using System;
+using System.IO;
+using System.Threading;
+
+class Program {
 
     public const int GAME_TICK = 200;
     public const int sizeX = 16;
@@ -11,8 +15,8 @@
 
 
 
-    public static int[] ZERO_DIR = [0, 0]; // Would do readonly here, but I don't think it was in classes, so whatever
-    public static int[] snakeHeadPosition = [sizeX/2, sizeY/2];
+    public static int[] ZERO_DIR = { 0, 0 }; // Would do readonly here, but I don't think it was in classes, so whatever
+    public static int[] snakeHeadPosition = { sizeX / 2, sizeY / 2 };
 
     /* Directions in this implementation go as follows:
     /  (-1, 0) LEFT [L]
@@ -21,7 +25,7 @@
     /  (1, 0)  RIGHT [R]
     /  (0, 0) NONE [W]
     */
-    public static int[] snakeHeadDirection = [1, 0];
+    public static int[] snakeHeadDirection = { 1, 0 };
 
     public static int snakeLength = 3;
 
@@ -127,19 +131,19 @@
     {
         if(input == "U") 
         {
-            return [0, -1];
+            return new int[] { 0, -1};
         } 
         else if(input == "D") 
         {
-            return [0, 1];
+            return new int[] { 0, 1};
         } 
         else if(input == "L") 
         {
-            return [-1, 0];
+            return new int[] { -1, 0};
         } 
         else if(input == "R") 
         {
-            return [1, 0];
+            return new int[] { 1, 0};
         } 
         else 
         {
